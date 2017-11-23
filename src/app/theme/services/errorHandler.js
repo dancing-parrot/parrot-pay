@@ -11,7 +11,7 @@
             handle403: function () {
                 cookieManagement.deleteCookie('TOKEN');
                 cookieManagement.deleteCookie('COMPANY');
-                $location.path('/login');
+                $location.path('/checkout');
             }
         }
     }

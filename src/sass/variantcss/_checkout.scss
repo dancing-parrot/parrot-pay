@@ -1,0 +1,16 @@
+.cart-img{
+  margin: 40px 0;
+}
+
+.custom-form-control{
+  height: 57px !important;
+  font-size: 30px;
+  font-weight: 800;
+  box-sizing: border-box;
+  padding: 0 20px !important;
+}
+
+.custom-form-control::placeholder{
+  font-size:30px;
+  font-weight: 800;
+}
