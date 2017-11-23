@@ -37,7 +37,6 @@
         vm.getQrCodeUrl();
 
         $scope.pay = function () {
-            $rootScope.$pageFinishedLoading = false;
                 if($scope.apiToken) {
                     $http.get(environmentConfig.API + '/admin/transactions/?status=Complete&metadata__code=' + $scope.code, {
                         headers: {
@@ -51,16 +50,15 @@
                                     $scope.pay()
                                 },3000);
                             } else {
-                                $rootScope.$pageFinishedLoading = true;
                                 $state.go('success',{amount: $scope.customAmount,merchantIdentifier: $scope.merchantIdentifier,merchantName: $scope.merchantName})
                             }
                         }
                     }).catch(function (error) {
-                        $rootScope.$pageFinishedLoading = true;
                         errorHandler.evaluateErrors(error.data);
                     });
                 }
         };
+        $scope.pay();
 
 
 
