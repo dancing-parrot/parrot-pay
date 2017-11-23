@@ -42,7 +42,7 @@
                     $http.get(environmentConfig.API + '/admin/transactions/?status=Complete&metadata__code=' + $scope.code, {
                         headers: {
                             'Content-Type': 'application/json',
-                            'Authorization': $scope.apiToken
+                            'Authorization': 'Token ' + $scope.apiToken
                         }
                     }).then(function (res) {
                         if (res.status === 200) {
@@ -52,7 +52,7 @@
                                 },3000);
                             } else {
                                 $rootScope.$pageFinishedLoading = true;
-                                $state.go('success',{amount: $scope.customAmount})
+                                $state.go('success',{amount: $scope.customAmount,merchantIdentifier: $scope.merchantIdentifier,merchantName: $scope.merchantName})
                             }
                         }
                     }).catch(function (error) {

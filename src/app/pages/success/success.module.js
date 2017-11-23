@@ -10,6 +10,8 @@
             .state('success', {
                 url: '/success',
                 params: {
+                    merchantIdentifier: null,
+                    merchantName: null,
                     amount: null
                 },
                 views:{

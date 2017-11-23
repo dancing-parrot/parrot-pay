@@ -8,7 +8,7 @@
     function CheckoutCtrl($scope,cookieManagement,$state,$stateParams,currencyModifiers,toastr) {
 
         if($stateParams.apiToken){
-            cookieManagement.setCookie('TOKEN','Token ' + $stateParams.apiToken);
+            cookieManagement.setCookie('TOKEN',$stateParams.apiToken);
         }
         $scope.apiToken = $stateParams.apiToken;
         $scope.merchantIdentifier = $stateParams.merchantIdentifier;

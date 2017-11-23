@@ -1,4 +1,4 @@
-PROJECT_NAME: echarge-demo
+PROJECT_NAME: eCommercedemo
 HOST_NAME: rehive-build-server
 NAMESPACE: echarge-demo-staging
 IMAGE: gcr.io/rehive-services/echarge-demo-staging
