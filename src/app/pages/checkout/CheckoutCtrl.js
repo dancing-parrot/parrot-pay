@@ -16,7 +16,7 @@
         $scope.amount = {};
         $scope.amount.custom = '';
 
-        $scope.checkout = function(){
+        $scope.checkoutAmount = function(){
             var amount;
             var validAmount = currencyModifiers.validateCurrency($scope.amount.custom, 2);
             if (validAmount) {

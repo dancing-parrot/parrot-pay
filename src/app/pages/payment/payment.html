@@ -8,6 +8,10 @@
 </div>
 <div class="payment-main">
     <div class="payment-block text-center">
+        <b class="btn btn-auth pull-right divider success-span">
+            <span class="pull-left">Pay with &nbsp; <img src="assets/img/flash.png" height="40" width="90"></span>
+            <span class="pull-right">R {{customAmount | currencyModifiersFilter: 2}}</span>
+        </b>
         <img class="cart-img" ng-src="{{qrCodeUrl}}">
         <div class="text-center">
             <b class="random-code">{{code}}</b>
